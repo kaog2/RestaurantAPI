@@ -17,7 +17,7 @@ namespace RestaurantAPI.Services.Contracts
 
         public JsonResult GetAllDishes();
 
-        public string GetDishById(string id);
+        public JsonResult GetDishById(string id);
 
     }
 }

@@ -30,9 +30,9 @@ namespace RestaurantAPI.Services
             return new JsonResult(Collection.Find(new BsonDocument()).ToList());
         }
 
-        public string GetDishById(string id)
+        public JsonResult GetDishById(string id)
         {
-            return Collection.Find(new BsonDocument { { "_id", new ObjectId(id) } }).ToList().ToJson();
+            return new JsonResult(Collection.Find(new BsonDocument { { "_id", new ObjectId(id) } }).ToList());
         }
 
         public string InsertDish(Dish dish)

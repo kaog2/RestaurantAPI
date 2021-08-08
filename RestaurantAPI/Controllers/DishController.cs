@@ -32,7 +32,7 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public string GetAllDishes(string id)
+        public JsonResult GetDishById(string id)
         {
             return _dishCollection.GetDishById(id);
         }
